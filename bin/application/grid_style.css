@@ -1,0 +1,30 @@
+/* Style for the GridPane */
+.grid-pane {
+    -fx-grid-lines-visible: true;
+}
+
+/* Thicker borders for subgrid divisions */
+.thick-border {
+    -fx-border-color: black;
+    -fx-border-width: 0 3px 3px 0; /* Order: top, right, bottom, left */
+}
+
+/* Center and style the text */
+.cell {
+    -fx-alignment: center;
+    -fx-font-size: 18px; /* Adjust font size */
+    -fx-border-color: black; /* Optional for regular cell borders */
+    -fx-border-width: 0.5px; /* Thin cell borders */
+}
+
+/* Style for vertical border lines */
+.vertical-line {
+    -fx-background-color: black; /* Set the color to black or any color for the line */
+    -fx-pref-width: 5px; /* Make the line width very small */
+}
+
+/* Style for horizontal border lines */
+.horizontal-line {
+    -fx-background-color: black; /* Set the color to black or any color for the line */
+    -fx-pref-height: 5px; /* Make the line height very small */
+}

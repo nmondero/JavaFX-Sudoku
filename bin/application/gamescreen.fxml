@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#on_click_out_of_grid" prefHeight="620.0" prefWidth="1000.0" stylesheets="@grid_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
+   <children>
+      <GridPane fx:id="board_ui" alignment="CENTER" cache="true" focusTraversable="true" gridLinesVisible="true" layoutX="341.0" layoutY="135.0" maxHeight="350.0" maxWidth="350.0" minHeight="350.0" minWidth="350.0" onKeyPressed="#on_keyboard_entry" onMouseClicked="#on_grid_clicked" prefHeight="350.0" prefWidth="350.0" styleClass="grid-pane" stylesheets="@grid_style.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+
+            <!-- Horizontal Divider Line -->
+            <Pane maxHeight="5.0" maxWidth="350.0" minWidth="350.0" prefHeight="5.0" prefWidth="350.0" styleClass="horizontal-line" GridPane.rowIndex="2" GridPane.rowSpan="1">
+               <GridPane.margin>
+                  <Insets bottom="-37.0" />
+               </GridPane.margin></Pane>
+            <Pane maxHeight="5.0" maxWidth="350.0" minWidth="350.0" prefHeight="5.0" prefWidth="350.0" styleClass="horizontal-line" GridPane.rowIndex="5" GridPane.rowSpan="1">
+               <GridPane.margin>
+                  <Insets bottom="-37.0" />
+               </GridPane.margin></Pane>
+            <Pane maxWidth="5.0" minHeight="350.0" minWidth="5.0" prefHeight="200.0" prefWidth="200.0" styleClass="vertical-line" GridPane.columnIndex="2" GridPane.columnSpan="2">
+               <GridPane.margin>
+                  <Insets bottom="-310.0" left="37.0" />
+               </GridPane.margin>
+            </Pane>
+            <Pane maxHeight="350.0" maxWidth="5.0" minHeight="350.0" prefHeight="200.0" prefWidth="5.0" styleClass="vertical-line" GridPane.columnIndex="6" GridPane.columnSpan="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets bottom="-310.0" />
+               </GridPane.margin>
+            </Pane>
+         </children>
+      </GridPane>
+      <Label fx:id="move_count_label" layoutX="462.0" layoutY="67.0" text="Move Count:  0" />
+      <Button fx:id="undo_button" layoutX="471.0" layoutY="98.0" mnemonicParsing="false" onAction="#on_click_undo" text="Undo Move" />
+      <Label fx:id="win_label" layoutX="486.0" layoutY="511.0" text="You won!" visible="false" />
+      <Button fx:id="return_to_main_btn" layoutX="462.0" layoutY="549.0" mnemonicParsing="false" onAction="#on_return_to_main" text="Back to menu" visible="false" />
+      <Label layoutX="404.0" layoutY="29.0" text="Click a square and type a number!" />
+   </children>
+</AnchorPane>

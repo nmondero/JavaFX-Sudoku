@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <children>
+      <Label layoutX="180.0" layoutY="80.0" text="Welcome to Sudoku">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Slider fx:id="start_amount_slider" blockIncrement="1.0" layoutX="123.0" layoutY="200.0" majorTickUnit="10.0" max="80.0" prefHeight="38.0" prefWidth="354.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+      <Label layoutX="172.0" layoutY="146.0" text="Change the starting number of squares" />
+      <Button fx:id="start_game_btn" layoutX="254.0" layoutY="306.0" mnemonicParsing="false" onMouseClicked="#on_start_game_clicked" text="Start Game" />
+      <Label fx:id="start_count_label" layoutX="243.0" layoutY="262.0" text="Starting Squares:" />
+      <Label layoutX="65.0" layoutY="169.0" text="(Warning: Higher numbers starting values may generate invalid boards!)" />
+   </children>
+</AnchorPane>
